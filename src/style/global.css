@@ -1,0 +1,354 @@
+/*? global clearing */
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    height: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.10);
+    z-index: 999;
+}
+
+.logo img{
+    width: 5rem;
+}
+
+.nav-list ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    color: violet;
+}
+
+.nav-list li {
+    margin: 1rem;
+    color: black;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: 300ms ease-in-out;
+}
+
+.nav-list li:hover {
+    background-image: linear-gradient(to right, rgb(6, 3, 158) , rgb(192, 117, 4));
+    background-clip: text;
+    color: transparent;
+    border-bottom: 1px solid  rgb(192, 117, 4);
+    transform: skew(10deg);
+  }
+
+#home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text-home-content {
+    margin-left: 3rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.text-home-content .title {
+    display: flex;
+    justify-content: center;
+}
+
+.text-home-content .title img {
+    width: 10rem;
+}
+
+.text-home-content h1{
+    font-family: "Protest Revolution";
+    font-size: 8rem;
+    font-weight: 400;
+}
+
+.images-home {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.shoes-home {
+    width: 80rem;
+}
+
+.splash {
+    width: 35rem;
+    position: absolute;
+    top: 6rem;
+    right: 7rem;
+    z-index: -1;
+}
+
+.social-media {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-media i{
+    font-size: 1.5rem;
+    color: rgb(0, 0, 75);
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.social-media i:hover {
+    color: rgb(179, 199, 0);
+    transform: scale(1.3);
+}
+
+#about {
+    width: 100%;
+    height: 100vh;
+}
+
+.title-about h1 {
+    font-size: 3rem;
+    font-family: 'kanit', sans-serif;
+    text-align: center;
+}
+
+.title-about h1 span {
+    font-family: "Protest Revolution";
+    background-image: linear-gradient(to right, rgb(6, 3, 158) , rgb(192, 117, 4));
+    background-clip: text;
+    color: transparent;
+}
+
+.container-about {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.about-menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.about-menu img {
+    margin: 1rem 0;
+    padding: 0.3rem;
+    width: 8rem;
+    background: linear-gradient(to right, rgb(3, 158, 137) , rgb(245, 7, 165));
+    cursor: pointer;
+    border-radius: 20px;
+    opacity: 0.80;
+    transition: 500ms;
+}
+
+.about-menu img:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.about-image {
+    margin-left: 2rem;
+    border: 4px solid  rgb(245, 7, 165);
+    border-radius: 30px;
+    box-shadow: 0px 0px 3px  rgb(245, 7, 165);
+}
+
+.about-image img {
+    width: 30rem;
+}
+
+.detail-content-about {
+    width: 40%;
+    padding: 2rem;
+    border: 4px solid  rgb(245, 7, 165);
+    border-radius: 30px;
+    box-shadow: 0px 0px 3px  rgb(245, 7, 165);
+}
+
+.detail-content-about h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "Protest Revolution";
+    background-image: linear-gradient(to right, rgb(3, 158, 137) , rgb(245, 7, 165));
+    background-clip: text;
+    color: transparent;
+}
+
+.detail-content-about p {
+    font-family: 'kanit', sans-serif;
+    background-image: linear-gradient(to right, rgb(6, 3, 158) , rgb(192, 117, 4));
+    background-clip: text;
+    color: transparent;
+}
+
+.product {
+    width: 100%;
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-product h1{
+    font-size: 3rem;
+    font-family: 'kanit', sans-serif;
+    text-align: center;
+}
+
+.title-product h1 span {
+    font-family: "Protest Revolution";
+}
+
+
+.list-product {
+    height: 45rem;
+    width: 70rem;
+    margin: 3rem 3rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.90);
+    border-radius: 10px;
+    width: 240px;
+    height: 300px;
+    padding: 1rem;
+    margin: 1rem;
+    transition: ease-in-out 300ms;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.icon i{
+    font-size: 20px;
+    margin-right: 10px;
+    transition: 300ms;
+}
+
+.icon i:hover{
+    color: red;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.product-image {
+    display: flex;
+    justify-content: center;
+}
+
+.product-image img{
+    width: 158px;
+}
+
+.contact {
+    width: 100%;
+    height: 100vh;
+}
+
+.contact h1 {
+    font-size: 3rem;
+    font-family: 'kanit', sans-serif;
+    text-align: center;
+}
+
+.wrapper-contact {
+    display: flex;
+}
+
+.text-area {
+    width: 50%;
+    margin: 3rem;
+    font-size: 1.4rem;
+    font-family: 'kanit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.text-area input {
+    height: 2rem;
+    padding: 0.7rem;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.text-area textarea {
+    padding: 0.7rem;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.detail-contact {
+    width: 50%;
+    margin: 3rem;
+}
+
+.detail {
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.6rem;
+    font-family: "Protest Revolution";
+}
+
+.contact-bg{
+    width: 40rem;
+    position: absolute;
+    right: 0;
+    opacity: 0.30;
+    z-index: -2;
+}
+
+.text-footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer {
+    background-color: whitesmoke;
+    padding: 1rem;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 4rem;
+}
